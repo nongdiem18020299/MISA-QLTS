@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISA QLTS</title>
+    <!-- Phần thư viên -->
+    <!-- Font chữ -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Thư viện jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Thư viện icon -->
+    <script src="https://kit.fontawesome.com/98524fe5fa.js" crossorigin="anonymous"></script>
+
+    <!-- Phần dùng chung  -->
+    <link rel="stylesheet" href="./common.css">
+    <!-- Phần màn hình home -->
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <div class="wrapper d-flex">
+        <!-- Phần sidebar -->
+        <div class="sidebar">
+            <!-- Phần tiêu đề của sidebar -->
+            <div class="title d-flex">
+                <div class="home-icon">
+                    <a href="#"><img src="./img/icon_home.png" alt=""></a>
+                </div>
+                <h2 id="title">MISA QLTS</h2>
+                <div class="menu-icon">
+                    <a href="#"> <img src="./img/menu.png" alt=""></a>
+                </div>                
+            </div>
+
+            <!-- Phần danh sách của sidebar -->
+            <ul class="sidebar-list" id="sidebar-list">
+                <li>
+                    <div class="sidebar-item">
+                        <img class="item-icon" src="./img/tongquan.png" alt="icon">
+                        Tổng quan
+                    </div>
+                </li>
+
+                <li>
+                    <div class="sidebar-item dropdown-btn">
+                        <img class="item-icon" src="./img/taisan.png" alt="icon">
+                        Tài sản
+                        <img class="drop-icon" src="./img/arrow-down.png" alt="">
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 1</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <div class="sidebar-item dropdown-btn">
+                        <img class="item-icon" src="./img/taisan_ht-db.png" alt="icon">
+                        Tài sản HT-DB
+                        <img class="drop-icon" src="./img/arrow-down.png" alt="">
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 1</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <div class="sidebar-item">
+                        <img class="item-icon" src="./img/congcu.png" alt="icon">
+                        Công cụ dụng cụ
+                    </div>    
+                </li>
+                
+                <li>
+                    <div class="sidebar-item">
+                        <img class="item-icon" src="./img/danhmuc.png" alt="icon">
+                        Danh mục
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="sidebar-item d-flex">
+                        <img class="item-icon" src="./img/tracuu.png" alt="icon">
+                        Tra cứu
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="sidebar-item d-flex">
+                        <img class="item-icon" src="./img/baocao.png" alt="icon">
+                        Báo cáo
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Phần nội dung -->
+        <div class="content">
+            <!-- Phần header của nội dung -->
+            <div class="header-content d-flex">
+                <div class="content-title">Sở tài chính</div>
+                <div class="year"><button>2021 <i class="fas fa-caret-down"></i></button></div>
+                <div class="menu d-flex">
+                    <div class="menu-icon"><img src="./img/bell.png" alt=""></div>
+                    <div class="menu-icon"><img src="./img/app (2).png" alt=""></div>
+                    <div class="menu-icon"><img src="./img/question.png" alt=""></div>
+                    <div class="menu-icon"><img src="./img/user.png" alt=""> <i class="fas fa-caret-down"></i></div>
+
+                </div>
+            </div>
+
+            <!-- Phần nội dung chính -->
+            <div class="main-content">
+                <!-- Thanh tiêu đề, chi tiết -->
+                <div class="detail-bar d-flex">
+                    <div class="name-content">Danh sách tài sản</div>
+                    <button class="more-btn">Thêm <i class="fas fa-caret-down"></i></button>
+                    <div class="menu-detail"><i class="fas fa-bars"></i><i class="fas fa-caret-down"></i></div>
+                </div>
+
+                <!-- Màn hình nội dung -->
+                <div class="content-screen">
+                    <!-- Thanh công cụ -->
+                    <div class="tool-bar d-flex">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Tìm kiếm tài sản">
+                        </div>
+                        <div class="tools d-flex">
+                            <div class="tool-icon"><img src="./img/excel.png" alt=""></div>
+                            <div class="tool-icon"><img src="./img/printer.png" alt=""> <i class="fas fa-caret-down"></i></div>
+                            <div class="tool-icon"><img src="./img/more.png" alt=""></div>
+                        </div>
+                    </div>
+
+                    <!-- Phần bảng -->
+                    <!-- Danh sách tài sản -->
+                    <div id="gridAsset">
+                        <div class="hide-item">
+                            <div class="col" FieldName="OrderNumber">STT</div>
+                            <div class="col" FieldName="AssetCode">Mã tài sản</div>
+                            <div class="col" FieldName="AssetName">Tên tài sản</div>
+                            <div class="col" FieldName="AssetType">Loại tài sản</div>
+                            <div class="col" FieldName="DepartmentName">Bộ phận sử dụng</div>
+                            <div class="col" FieldName="Amount" DataType="Number">Số lượng</div>
+                            <div class="col" FieldName="Price" DataType="Money">Nguyên giá</div>
+                            <div class="col" FieldName="Accumulated" DataType="Money">Lũy kế</div>
+                            <div class="col" FieldName="RealPrice" DataType="Money">Giá trị còn lại</div>
+                        </div>
+                    </div>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Phần dùng chung  -->
+    <script src="./common.js"></script>
+    <script src="./data.js"></script>
+    <!-- Phần màn hình home -->
+    <script src="./home.js"></script>
+    <!-- Phần bảng danh sách tài sản -->
+    <script src="./asset.js"></script>
+    
+</body>
+</html>
